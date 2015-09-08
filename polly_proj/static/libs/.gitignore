@@ -1,0 +1,8 @@
+﻿# Ignore all
+*
+
+# but not this
+!.gitignore
+
+# and in subdirs
+!*/
