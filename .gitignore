@@ -1,0 +1,21 @@
+﻿# logs
+######################
+*.log
+
+# db
+######################
+project.db
+
+# gIt
+######################
+.git
+
+# python cache
+######################
+__pycache__
+
+# generated
+#styles.css
+
+# libs
+#libs/*

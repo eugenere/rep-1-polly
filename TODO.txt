@@ -1,0 +1,6 @@
+﻿To do list
+1. .gitignore 
+2. cmn to git
+3. pawnshow to popshop
+4. user,owner,client,paymaster(cashier)
+5. design admin
