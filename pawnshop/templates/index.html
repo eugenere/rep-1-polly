@@ -1,0 +1,11 @@
+﻿{% extends "base.html" %}
+
+{% block content %}
+<div class='content'>
+    <h4>PawnShop</h4>
+    <a href="{% url 'pawnshop:index' %}" class="btn btn-default" disabled="disabled">index</a>
+    <a href="{% url 'pawnshop:new_slave' %}" class="btn btn-default">new slave</a>
+    <a href="{% url 'pawnshop:new_trash' %}" class="btn btn-default">new trash</a>
+    <a href="{% url 'pawnshop:new_slave2' %}" class="btn btn-default">new slave form</a>
+</div>
+{% endblock %}
