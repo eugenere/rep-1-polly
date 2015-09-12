@@ -6,11 +6,15 @@ from django.contrib.staticfiles.urls import staticfiles_urlpatterns
 from django.contrib import admin
 from django.conf import settings
 
+from cmn.etc import dbg
+
 admin.autodiscover()
 
 urlpatterns = patterns('',
-    url(r'^admin/', include(admin.site.urls)),  # NOQA
+    url(r'^djangojs/', include('djangojs.urls')),
+    url(r'^researchs/', include('researchs.urls', namespace="researchs")),
     url(r'^pawnshop/', include('pawnshop.urls', namespace="pawnshop")),
+    url(r'^admin/', include(admin.site.urls)),  # NOQA
     url(r'^', include('cms.urls')),
 )
 
@@ -18,3 +22,4 @@ import logging
 log = logging.getLogger('dbg')
 
 log.debug('resolve url')
+dbg('resolve url')

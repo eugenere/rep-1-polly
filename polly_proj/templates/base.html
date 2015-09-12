@@ -1,4 +1,4 @@
-{% load cms_tags staticfiles sekizai_tags menu_tags extra_tags %}
+{% load cms_tags staticfiles sekizai_tags menu_tags extra_tags js %}
 <!DOCTYPE html>
 <html lang="ru">
     <head>
@@ -42,5 +42,12 @@
         <script src="{% static 'libs/bootstrap/js/bootstrap.min.js' %}"></script>
         <script src="{% static 'js/script.js' %}"></script>
 
+        {% django_js %}
+        <script>
+            console.log(Django.url('researchs:indexJson'));
+            console.log(Django.url('pawnshop:index'));
+            console.log(Django.context.STATIC_URL);
+            console.log(Django.file('test.json'));
+        </script>
     </body>
 </html>

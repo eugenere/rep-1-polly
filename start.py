@@ -58,6 +58,9 @@ def test2():
 
     print(ml3)
 
+def doHttpRequest(aReq):
+    pass
+
 if __name__ == "__main__":
     print('DateTime: ' + getDateTime())
     print('Python:   ' + getPythonVer())

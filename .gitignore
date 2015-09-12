@@ -14,6 +14,10 @@ project.db
 ######################
 __pycache__
 
+# models migrations
+######################
+migrations 
+
 # generated
 #styles.css
 

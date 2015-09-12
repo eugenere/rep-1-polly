@@ -28,8 +28,8 @@ STATICFILES_FINDERS = (
 
 TEMPLATES = [{
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
-		'DIRS': [
-			os.path.join(BASE_DIR, PROJ_NAME, 'templates'),
+        'DIRS': [
+            os.path.join(BASE_DIR, PROJ_NAME, 'templates'),
         ],
         'APP_DIRS': True,
         'OPTIONS': {
@@ -46,6 +46,7 @@ TEMPLATES = [{
                     'django.contrib.messages.context_processors.messages',
                     'sekizai.context_processors.sekizai',
                     'cms.context_processors.cms_settings',
+                    'djangojs.context_processors.booleans',
                 )
         }
     },
@@ -71,6 +72,7 @@ INSTALLED_APPS = (
     'django.contrib.auth',
     'django.contrib.contenttypes',
     'django.contrib.sessions',
+    'flat',
     'django.contrib.admin',
     'django.contrib.sites',
     'django.contrib.sitemaps',
@@ -93,9 +95,12 @@ INSTALLED_APPS = (
     'reversion',
 
     'bootstrapform',
+    'djangojs',
 
-    'polly_proj',
+    PROJ_NAME,
     'pawnshop',
+    'researchs',
+    'popshop',
 )
 
 LANGUAGES = (
@@ -152,4 +157,3 @@ MIGRATION_MODULES = {
 }
 
 from .log_settings import *
-

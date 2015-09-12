@@ -9,7 +9,7 @@ LOGGING = {
             'format': '%(levelname)s %(asctime)s %(pathname)s:%(lineno)d %(message)s'
         },
         'simple': {
-            'format': '%(levelname)s %(message)s'
+            'format': '%(message)s'
         },
     },
     'handlers': {

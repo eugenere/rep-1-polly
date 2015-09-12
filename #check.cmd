@@ -1,2 +1,2 @@
-@call #manage check
-@call #manage cms check
+@call #manage check --no-color 
+@call #manage cms check --no-color 
