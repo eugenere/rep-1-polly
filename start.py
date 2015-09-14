@@ -61,9 +61,35 @@ def test2():
 def doHttpRequest(aReq):
     pass
 
+def getSqliteVer():
+    import sqlite3
+    return sqlite3.version
+
+def fillSqlite(aDbFile, aSqlFile):
+    import sqlite3, os
+
+    with sqlite3.connect(aDbFile) as conn:
+        with open(aSqlFile, 'rt') as sqlFile:
+            schema = sqlFile.read()
+            conn.executescript(schema)
+
+def dumpSqlite(aDbFile, aSqlFile):
+    import sqlite3, os
+
+    with sqlite3.connect(aDbFile) as conn:
+        with open(aSqlFile, 'w') as f:
+            for line in conn.iterdump():
+                f.write('%s\n' % line)
+    
+
 if __name__ == "__main__":
     print('DateTime: ' + getDateTime())
     print('Python:   ' + getPythonVer())
     print('Django:   ' + getDjangoVer())
     print('CMS:      ' + getDjangoCmsVer())
+    print('Sqlite:   ' + getSqliteVer())
     print('Cmn:      ' + getCmnVer())
+
+    # dumpSqlite('dump.db', 'dump.sql')
+
+
