@@ -4,6 +4,9 @@ __author__ = 'user'
 # sys.path.append('C:\work.py\PycharmProjects')
 from cmn.etc import *
 import subprocess
+from django.core import management
+
+import msvcrt
 
 def newCmsProj(aProjName):
     import sys, os
@@ -90,6 +93,13 @@ if __name__ == "__main__":
     print('Sqlite:   ' + getSqliteVer())
     print('Cmn:      ' + getCmnVer())
 
-    # dumpSqlite('dump.db', 'dump.sql')
+    # dumpSqlite('project.db', 'dump.sql')
+    # fillSqlite('project2.db', 'dump.sql')
+    # input("Press any key to exit")
+
+    management.call_command('help', verbosity=0, interactive=False)
+    
+    print("Press any key")
+    msvcrt.getch()
 
 

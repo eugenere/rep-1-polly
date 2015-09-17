@@ -14,6 +14,7 @@ urlpatterns = patterns('',
     url(r'^djangojs/', include('djangojs.urls')),
     url(r'^researchs/', include('researchs.urls', namespace="researchs")),
     url(r'^pawnshop/', include('pawnshop.urls', namespace="pawnshop")),
+    url(r'^popshop/', include('popshop.urls', namespace="popshop")),
     url(r'^admin/', include(admin.site.urls)),  # NOQA
     url(r'^', include('cms.urls')),
 )

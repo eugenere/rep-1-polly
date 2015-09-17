@@ -1,6 +1,12 @@
-﻿To do list
+﻿To do list (MAIN)
 1. .gitignore 
 2. cmn to git
 3. pawnshow to popshop
 4. user,owner,client,paymaster(cashier)
 5. design admin
+
+
+To do list (JobIsChallange)
+1. JobIsChallange
+    предложения о работе в виде соревнования с призами
+    1(и если возможно 2,3) место - призовое
