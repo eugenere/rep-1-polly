@@ -1,0 +1,21 @@
+﻿{% extends "ps_base.html" %}
+
+{% load extra_tags %}
+{% load bootstrap %}
+
+{% block page-title %}
+    Добавить нового кассира
+{% endblock %}
+
+{% block content %}
+    index1
+    <br>
+    {% include 'href.html' with name='Добавить кассира' url_name='popshop:cashier-create' %}
+    {% include 'href.html' with name='Добавить клиента' url_name='popshop:client-create' %}
+    {% include 'href.html' with name='Добавить залог' url_name='popshop:pledge-create' %}
+	
+    {% include 'href.html' with name='Список кассиров' url_name='popshop:cashiers-list' %}
+    {% include 'href.html' with name='Список клиентов' url_name='popshop:clients-list' %}
+    {% include 'href.html' with name='Список залогов' url_name='popshop:pledges-list' %}
+{% endblock content %}
+

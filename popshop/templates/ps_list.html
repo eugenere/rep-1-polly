@@ -1,0 +1,25 @@
+﻿{% extends "ps_base.html" %}
+
+{% load extra_tags %}
+{% load bootstrap %}
+
+{% block page-title %}
+    {{ title }}
+{% endblock %}
+
+{% block content %}
+
+    <legend>
+        {% block head-title %}
+            {{ head }}
+        {% endblock %}
+    </legend>
+    
+    <ul>
+        {% for item in object_list %}
+            <li>
+                {% include templ with item=item %}
+            </li>
+        {% endfor %}
+    </ul>
+{% endblock %}

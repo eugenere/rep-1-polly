@@ -1,7 +1,7 @@
 from django.shortcuts import render
 from django.http import HttpResponse
 from django.views.generic import *
-from django.core.urlresolvers import reverse
+from django.core.urlresolvers import reverse, reverse_lazy
 
 import logging
 from . import models
@@ -13,6 +13,13 @@ log = logging.getLogger('dbg')
 def index(request):
     log.debug('limbo index')
     return HttpResponse('welcome to limbo(popshow)')
+
+
+def index1(request):
+    context = {
+        'varName': 'var value',
+    }
+    return render(request, 'index1.html', context)
 
 
 def fakeRequest(request):
@@ -31,7 +38,7 @@ class CreateCashier(CreateView):
             'passportCode',
             'address',
     ]
-    def get_success_url(self): 
+    def get_success_url(self):
         return reverse("popshop:cashiers-list") 
 
 
@@ -44,6 +51,8 @@ class CreateClient(CreateView):
             'passportCode',
             'address',
     ]
+    def get_success_url(self):
+        return reverse("popshop:clients-list") 
 
 
 class CreatePledge(CreateView):
@@ -54,3 +63,8 @@ class CreatePledge(CreateView):
             'price',
             'term',
     ]
+	
+class CashiersList(ListView):
+    model = models.Cashier
+	
+	

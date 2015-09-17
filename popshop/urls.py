@@ -10,7 +10,7 @@ urlpatterns = [
     url(r'^cashier/create', views.CreateCashier.as_view(), name='cashier-create'),
     url(r'^cashier/update', views.fakeRequest, name='cashier-update'),
     url(r'^cashier/description', views.fakeRequest, name='cashier-description'),
-    url(r'^cashiers/list', views.fakeRequest, name='cashiers-list'),
+    url(r'^cashiers/list', views.CashiersList.as_view(), name='cashiers-list'),
 
     url(r'^client/create', views.CreateClient.as_view(), name='client-create'),
     url(r'^client/update', views.fakeRequest, name='client-update'),
@@ -22,5 +22,5 @@ urlpatterns = [
     url(r'^pledge/description', views.fakeRequest, name='pledge-description'),
     url(r'^pledges/list', views.fakeRequest, name='pledges-list'),
 
-    url(r'^$', views.index, name='index'),
+    url(r'^$', views.index1, name='index'),
 ]

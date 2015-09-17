@@ -1,0 +1,26 @@
+{% load cms_tags staticfiles sekizai_tags menu_tags extra_tags %}
+
+<!doctype html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>{% block page-title %}Лимб{% endblock page-title %}</title>
+        <meta name="viewport" content="width=device-width,initial-scale=1">
+
+        <link href="{% static 'css/styles.css' %}" rel="stylesheet">
+        <link href="{% static 'libs/bootstrap/css/bootstrap.min.css' %}"
+            rel="stylesheet" media="screen">
+
+        {% render_block "css" %}
+    </head>
+    <body class="limbo">
+        <div class="container">
+            {% block content %}содержимое страницы{% endblock content %}
+        </div>
+        
+        <script src="{% static 'libs/jquery.js' %}"></script>
+        <script src="{% static 'libs/bootstrap/js/bootstrap.min.js' %}"></script>
+        
+        {% render_block "js" %}
+    </body>
+</html>
