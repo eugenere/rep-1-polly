@@ -21,7 +21,7 @@ djangocms-teaser==0.1
 djangocms-text-ckeditor==2.6.0
 djangocms-video==0.1
 html5lib==0.999999
-Pillow==2.9.0
+Pillow==9.0.1
 pytz==2015.4
 six==1.9.0
 tzlocal==1.2
